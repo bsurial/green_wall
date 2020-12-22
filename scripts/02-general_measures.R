@@ -275,11 +275,13 @@ yeast2 <- yeast_plot +
 pm2 / gesamt2 / yeast2 / fungi2 + 
   plot_layout(heights = c(2, 1, 1, 2))   & 
   labs(x = "Weeks") & 
+  scale_color_grey() & 
   geom_vline(xintercept = 0, color = "grey50", linetype = 2) & 
   geom_vline(xintercept = 14, color = "grey50", linetype = 3) &
   plot_annotation(caption = "**Dashed line**: installation of first wall / **Dotted line**: installation of an adapted second wall") & 
   theme(panel.grid.minor.x = element_blank(), 
   panel.grid.minor.y = element_blank(),
+  panel.grid.major.x = element_blank(),
   plot.title = element_text(face = "bold"),
   plot.caption = ggtext::element_markdown(lineheight = 1.5, hjust = 0.5),
   axis.title = element_text(size = 9, lineheight = 1.5))
